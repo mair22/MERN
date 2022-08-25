@@ -7,13 +7,13 @@ const PostSchema = new Schema({
         required: true
     },
     description: {
-        type: string
+        type: String
     },
     url: {
-        type: string
+        type: String
     },
     status: {
-        type: string,
+        type: String,
         enum: ['TO LEARN', 'LEARNING', 'LEARNED']
     },
     user: {
