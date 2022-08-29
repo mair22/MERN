@@ -1,12 +1,27 @@
-import LoginForm from "../components/auth/LoginForm"
+import LoginForm from "../components/auth/LoginForm";
+import RegisterForm from "../components/auth/RegisterForm";
 
 const Auth = ({ authRoute }) => {
-  return (
-    <>
-        LearnIt
-        {authRoute === 'login' && <LoginForm / >}
-    </>
-  )
-}
+  let body;
 
-export default Auth
+  body = (
+    <>
+      {authRoute === "/login" && <LoginForm />}
+      {authRoute === "/register" && <RegisterForm />}
+    </>
+  );
+
+  return (
+    <div className="landing">
+      <div className="dark-over-lay">
+        <div className="landing-inner">
+          <h1>LearnIt</h1>
+          <h4>Keep track of what you are learning</h4>
+          {body}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Auth;
