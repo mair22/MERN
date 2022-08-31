@@ -9,7 +9,7 @@ const LoginForm = () => {
   const { loginUser } = useContext(AuthContext);
 
   //Router
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   //Local State
   const [loginForm, setLoginForm] = useState({
@@ -27,10 +27,9 @@ const LoginForm = () => {
 
     try {
       const loginData = await loginUser(loginForm);
-      console.log(loginData);
+      console.log(loginData)
       if (loginData.success) {
-        history("/dashboard");
-      } else {
+        navigate("/dashboard");
       }
     } catch (error) {
       console.log(error);

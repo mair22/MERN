@@ -8,18 +8,23 @@ import ProtectedRoute from "./components/routing/ProtectedRoute";
 
 function App() {
   return (
-    <AuthContextProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Auth authRoute="/login" />} />
           <Route path="/register" element={<Auth authRoute="/register" />} />
-          <Route path="/" element={<ProtectedRoute />}>
-            <Route path="/dashboard" element={<DashBoard />} />
-          </Route>
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashBoard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
-      </BrowserRouter>
-    </AuthContextProvider>
+      </AuthContextProvider>
+    </BrowserRouter>
   );
 }
 

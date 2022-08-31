@@ -12,20 +12,24 @@ const Auth = ({ authRoute }) => {
 
   let body;
 
-  if (authLoading)
-    body = (
-      <div className="d-flex justify-content-center mt-2">
-        <Spinner animation="border" variant="info" />
-      </div>
-    );
-  else if (isAuthenticated) return <Navigate to={"/dashboard"} />;
-  else
-    body = (
-      <>
-        {authRoute === "/login" && <LoginForm />}
-        {authRoute === "/register" && <RegisterForm />}
-      </>
-    );
+  if (isAuthenticated) {
+    return <Navigate to={"/dashboard"} />;
+  }
+
+  // if (authLoading)
+  //   body = (
+  //     <div className="d-flex justify-content-center mt-2">
+  //       <Spinner animation="border" variant="info" />
+  //     </div>
+  //   );
+  // else if (isAuthenticated) return <Navigate to={"/dashboard"} />;
+
+  body = (
+    <>
+      {authRoute === "/login" && <LoginForm />}
+      {authRoute === "/register" && <RegisterForm />}
+    </>
+  );
 
   return (
     <div className="landing">
