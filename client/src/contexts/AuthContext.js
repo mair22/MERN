@@ -13,8 +13,6 @@ const AuthContextProvider = ({ children }) => {
     user: null,
   });
 
-
-
   //Authenticate user
   const loadUser = async () => {
     if (localStorage[LOCAL_STORAGE_TOKEN_NAME]) {
@@ -26,18 +24,21 @@ const AuthContextProvider = ({ children }) => {
             type: "SET_AUTH",
             payload: { isAuthenticated: true, user: response.data.user },
           });
-
         }
       } catch (error) {
-        localStorage.removeItem(LOCAL_STORAGE_TOKEN_NAME)
-        setAuthToken(null)
-        dispatch({type: 'SET_AUTH', payload: {isAuthenticated: false, user: null}})
+        localStorage.removeItem(LOCAL_STORAGE_TOKEN_NAME);
+        setAuthToken(null);
+        dispatch({
+          type: "SET_AUTH",
+          payload: { isAuthenticated: false, user: null },
+        });
       }
     }
-
   };
 
-  useEffect(() => {loadUser()}, [])
+  useEffect(() => {
+    loadUser();
+  }, []);
 
   //Login
   const loginUser = async (userForm) => {
@@ -49,10 +50,10 @@ const AuthContextProvider = ({ children }) => {
           response.data.accessToken
         );
 
-        dispatch({
-          type: "SET_AUTH",
-          payload: { isAuthenticated: true, user: response.data.user },
-        });
+      dispatch({
+        type: "SET_AUTH",
+        payload: { isAuthenticated: true, user: response.data.user },
+      });
 
       return response.data;
     } catch (error) {

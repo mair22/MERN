@@ -33,7 +33,7 @@ import Spinner from "react-bootstrap/esm/Spinner";
 //   );
 // };
 
-const ProtectedRoute = ({redirectPath = '/login', children }) => {
+const ProtectedRoute = ({ redirectPath = "/login", children }) => {
   const {
     authState: { authLoading, isAuthenticated },
   } = useContext(AuthContext);
