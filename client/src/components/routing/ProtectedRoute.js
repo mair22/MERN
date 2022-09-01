@@ -2,6 +2,7 @@ import { Route, Navigate, Routes } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import Spinner from "react-bootstrap/esm/Spinner";
+import NavbarMenu from "../layouts/NavbarMenu";
 
 // const ProtectedRoute = ({ component: Component, ...rest }) => {
 //   const {
@@ -39,7 +40,11 @@ const ProtectedRoute = ({ redirectPath = "/login", children }) => {
   } = useContext(AuthContext);
 
   if (!isAuthenticated) {
-    return <Navigate to={redirectPath} replace />;
+    return (
+      <NavbarMenu>
+        <Navigate to={redirectPath} replace />
+      </NavbarMenu>
+    );
   }
 
   if (authLoading) {
