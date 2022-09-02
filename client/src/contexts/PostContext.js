@@ -23,13 +23,20 @@ const PostContextProvider = ({ children }) => {
         });
       }
     } catch (error) {
-        return error.response.data ? error.response.data : {success: false, message: 'Server error'}
+      return error.response.data
+        ? error.response.data
+        : { success: false, message: "Server error" };
     }
   };
 
-//   return (
-//     <PostContextProvider value={postContextData}>
-//         {children}
-//     </PostContextProvider>
-//   )
+  //Posts context data
+  const postContextData = { postState, getPosts };
+
+  return (
+    <PostContext.Provider value={postContextData}>
+      {children}
+    </PostContext.Provider>
+  );
 };
+
+export default PostContextProvider;
