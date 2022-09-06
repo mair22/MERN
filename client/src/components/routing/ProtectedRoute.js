@@ -38,15 +38,16 @@ const ProtectedRoute = ({ redirectPath = "/login", children }) => {
   const {
     authState: { authLoading, isAuthenticated },
   } = useContext(AuthContext);
-
+  
   if (!isAuthenticated) {
     return (
-      <NavbarMenu>
+      <div>
+        <NavbarMenu />
         <Navigate to={redirectPath} replace />
-      </NavbarMenu>
+      </div>
     );
   }
-
+  
   if (authLoading) {
     return (
       <div className="spinner-container">
@@ -54,6 +55,7 @@ const ProtectedRoute = ({ redirectPath = "/login", children }) => {
       </div>
     );
   }
+  
   return children;
 };
 
