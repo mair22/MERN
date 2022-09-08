@@ -36,7 +36,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Z
 
 ###
 
-PUT http://localhost:5000/api/post/6307229a1fc5034c3d2ea4e5
+PUT http://localhost:5000/api/post/63195a7714dce048ff581f63
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Zjg2NzU2ZWE1MTJiNjgwYzkzMDgiLCJpYXQiOjE2NjI1MjAyMTF9.aagIbaxkqntnUWwPDYD-GWkqx2XkpZt_ZlG2_uMRcL8
 
@@ -49,5 +49,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Z
 
 ###
 
-DELETE http://localhost:5000/api/post/6307229a1fc5034c3d2ea4e5
+DELETE http://localhost:5000/api/post/63195a7714dce048ff581f63
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Zjg2NzU2ZWE1MTJiNjgwYzkzMDgiLCJpYXQiOjE2NjI1MjAyMTF9.aagIbaxkqntnUWwPDYD-GWkqx2XkpZt_ZlG2_uMRcL8
