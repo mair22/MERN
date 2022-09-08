@@ -6,6 +6,7 @@ import AuthContextProvider from "./contexts/AuthContext";
 import DashBoard from "./views/DashBoard";
 import ProtectedRoute from "./components/routing/ProtectedRoute";
 import PostContextProvider from "./contexts/PostContext";
+import NavbarMenu from "./components/layouts/NavbarMenu";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               path="/dashboard"
               element={
                 <ProtectedRoute>
+                  <NavbarMenu />
                   <DashBoard />
                 </ProtectedRoute>
               }
