@@ -50,6 +50,8 @@ const AuthContextProvider = ({ children }) => {
           response.data.accessToken
         );
 
+      console.log(response.data.user);
+
       dispatch({
         type: "SET_AUTH",
         payload: { isAuthenticated: true, user: response.data.user },
