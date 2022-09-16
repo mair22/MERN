@@ -106,6 +106,7 @@ router.post("/login", async (req, res) => {
       success: true,
       message: "Logged in successfully",
       accessToken,
+      user,
     });
   } catch (error) {
     console.log(error);
