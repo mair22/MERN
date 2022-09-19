@@ -11,8 +11,8 @@ import NavbarMenu from "./components/layouts/NavbarMenu";
 function App() {
   return (
     <BrowserRouter>
-      <PostContextProvider>
-        <AuthContextProvider>
+      <AuthContextProvider>
+        <PostContextProvider>
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Auth authRoute="/login" />} />
@@ -27,8 +27,8 @@ function App() {
               }
             />
           </Routes>
-        </AuthContextProvider>
-      </PostContextProvider>
+        </PostContextProvider>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }

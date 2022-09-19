@@ -66,7 +66,7 @@ const DashBoard = () => {
       <>
         <Row className="row-cols-1 row-cols-md-3 g-4 mx-auto mt-3">
           {posts.map((post) => (
-            <Col key={post.id} className="my-2">
+            <Col key={post._id} className="my-2">
               <SinglePost post={post} />
             </Col>
           ))}
@@ -84,17 +84,18 @@ const DashBoard = () => {
   }
 
   // Open Add Post Modal
-  // <OverlayTrigger
-  //   placement="left"
-  //   overlay={<Tooltip>Add a new thing to learn</Tooltip>}
-  // >
-  <Button
-    className="btn-floating"
-    onClick={setShowAddPostModal.bind(this, true)}
+  <OverlayTrigger
+    placement="left"
+    overlay={<Tooltip>Add a new thing to learn</Tooltip>}
   >
-    <img src={addIcon} alt="add-post" width="60" height="60" />
-  </Button>;
-  // </OverlayTrigger>;
+    <Button
+      className="btn-floating"
+      onClick={setShowAddPostModal.bind(this, true)}
+    >
+      <img src={addIcon} alt="add-post" width="60" height="60" />
+    </Button>
+    ; //{" "}
+  </OverlayTrigger>;
 
   return (
     <>
