@@ -12,15 +12,15 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "mair22",
-    "password": "Hirosawa2212"
+    "username": "fugena",
+    "password": "2212"
 }
 
 ###
 
 POST http://localhost:5000/api/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Zjg2NzU2ZWE1MTJiNjgwYzkzMDgiLCJpYXQiOjE2NjMzMTk3ODZ9.fKAEahRrWWGi2fRXgAHfZB9_6LAEVXaMXBUWV8usgNI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2ZjgxYjU2ZWE1MTJiNjgwYzkzMDIiLCJpYXQiOjE2NjM1NTI5MjF9.0WwhASwzzpfFXeLU27x5PMoMtW65DwVCDTebfbSlpCg
 
 {
     "title": "MERN",
@@ -32,13 +32,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Z
 ###
 
 GET http://localhost:5000/api/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Zjg2NzU2ZWE1MTJiNjgwYzkzMDgiLCJpYXQiOjE2NjMzMTk3ODZ9.fKAEahRrWWGi2fRXgAHfZB9_6LAEVXaMXBUWV8usgNI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2ZjgxYjU2ZWE1MTJiNjgwYzkzMDIiLCJpYXQiOjE2NjM1NTI5MjF9.0WwhASwzzpfFXeLU27x5PMoMtW65DwVCDTebfbSlpCg
 
 ###
 
-PUT http://localhost:5000/api/post/63243efe668bc8da50033db1
+PUT http://localhost:5000/api/post/6327cdc8d517e0c4552612b5
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Zjg2NzU2ZWE1MTJiNjgwYzkzMDgiLCJpYXQiOjE2NjMzMTk3ODZ9.fKAEahRrWWGi2fRXgAHfZB9_6LAEVXaMXBUWV8usgNI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2ZjgxYjU2ZWE1MTJiNjgwYzkzMDIiLCJpYXQiOjE2NjM1NTI5MjF9.0WwhASwzzpfFXeLU27x5PMoMtW65DwVCDTebfbSlpCg
 
 {
     "title": "Test Update",
@@ -49,5 +49,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Z
 
 ###
 
-DELETE http://localhost:5000/api/post/63243efe668bc8da50033db1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2Zjg2NzU2ZWE1MTJiNjgwYzkzMDgiLCJpYXQiOjE2NjMzMTk3ODZ9.fKAEahRrWWGi2fRXgAHfZB9_6LAEVXaMXBUWV8usgNI
+DELETE http://localhost:5000/api/post/6327cdc8d517e0c4552612b5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA2ZjgxYjU2ZWE1MTJiNjgwYzkzMDIiLCJpYXQiOjE2NjM1NTI5MjF9.0WwhASwzzpfFXeLU27x5PMoMtW65DwVCDTebfbSlpCg
